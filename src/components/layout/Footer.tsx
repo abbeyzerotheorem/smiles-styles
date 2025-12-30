@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Palette, PawPrint, Accessibility, Leaf, Phone, Mail, MapPin } from "lucide-react";
+import { PawPrint, Accessibility, Leaf, Phone, Mail, MapPin } from "lucide-react";
 
 const navItems = [
   { name: "Services", href: "#services" },
@@ -15,7 +15,6 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <Palette className="h-7 w-7 text-primary" />
               <span className="font-headline text-xl font-bold text-foreground">
                 Smiles & Styles
               </span>
@@ -75,7 +74,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-primary/10 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Step into Smiles & Styles. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Smiles & Styles. All Rights Reserved.
           </p>
         </div>
       </div>

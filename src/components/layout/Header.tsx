@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, Palette } from "lucide-react";
+import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -34,9 +34,8 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Palette className="h-7 w-7 text-primary" />
           <span className="font-headline text-2xl font-bold text-foreground">
-            Step into Smiles & Styles
+            Smiles & Styles
           </span>
         </Link>
 

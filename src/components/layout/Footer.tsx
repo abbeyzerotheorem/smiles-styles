@@ -8,6 +8,24 @@ const navItems = [
   { name: "Book Now", href: "#book" },
 ];
 
+const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.38 1.25 4.85L2 22l5.25-1.38c1.47.79 3.1 1.25 4.85 1.25 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"></path>
+      <path d="M16.41 14.06c-.14-.28-.5-..46-.73-.46-.23 0-.46.06-.73.22-.28.16-.73.73-1 1-.28.28-.5.39-.73.22-.23-.17-1.47-.52-2.8-1.7s-2.14-2.52-2.14-2.8.33-.46.46-.64c.13-.17.28-.28.39-.46.1-.17.06-.33 0-.46-.05-.17-.73-1.7-.99-2.28-.28-.57-.5-.46-.73-.46h-.5c-.22 0-.45.11-.64.33-.2.22-.73.73-.73 1.7s.73 2 .73 2.28c0 .28 1.47 3.59 3.59 5 2.12 1.4 2.8 1.12 3.39.99.59-.13.73-.73.73-1.41.05-.68 0-1.12 0-1.12z"></path>
+    </svg>
+  );
+
 export default function Footer() {
   return (
     <footer className="bg-primary/5 border-t border-primary/10">
@@ -58,6 +76,12 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-primary" />
                 <span className="text-sm text-muted-foreground">bookings@smilesstyles.co.za</span>
+              </li>
+              <li className="flex items-center gap-3">
+                  <a href="https://wa.me/27765075573" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary">
+                    <WhatsAppIcon className="h-5 w-5 shrink-0 text-primary" />
+                    <span>WhatsApp</span>
+                  </a>
               </li>
             </ul>
           </div>

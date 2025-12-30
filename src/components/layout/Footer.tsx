@@ -68,7 +68,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 mt-1 shrink-0 text-primary" />
                 <span className="text-sm text-muted-foreground">
-                  173 Bram Fischer, Randburg, Johannesburg
+                  173 Bram Fischer Dr, Ferndale, Randburg, 2194
                 </span>
               </li>
               <li className="flex items-center gap-3">

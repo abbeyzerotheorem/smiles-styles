@@ -16,6 +16,7 @@ const navItems = [
 
 function MobileNav() {
   const [open, setOpen] = React.useState(false);
+  const id = React.useId();
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
@@ -29,7 +30,7 @@ function MobileNav() {
           <div className="flex flex-col gap-6">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={`${id}-${item.name}`}
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className="text-lg font-medium text-foreground transition-colors hover:text-primary"
@@ -68,7 +69,7 @@ export default function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <span className="font-headline text-2xl font-bold text-foreground">
-            Salon Elegance
+            Smiles & Styles
           </span>
         </Link>
 

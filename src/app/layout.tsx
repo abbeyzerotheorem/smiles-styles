@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Salon Elegance',
+  title: 'Smiles & Styles',
   description: 'Randburg\'s premier destination for exquisite nail artistry and beauty services.',
 };
 

@@ -32,6 +32,12 @@ export const services: Service[] = [
     price: 'R350',
     icon: 'Footprints',
   },
+  {
+    name: 'Normal Eye Lashes',
+    description: 'Enhance your natural beauty with expertly applied classic eyelash extensions for a subtle, charming look.',
+    price: 'R200',
+    icon: 'Eye',
+  }
 ];
 
 export type Testimonial = {

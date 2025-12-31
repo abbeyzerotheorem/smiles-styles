@@ -4,7 +4,7 @@ import Hero from '@/components/landing/Hero';
 import Services from '@/components/landing/Services';
 import Gallery from '@/components/landing/Gallery';
 import Testimonials from '@/components/landing/Testimonials';
-import Booking from '@/components/landing/Booking';
+import ContactForm from '@/components/landing/Booking';
 import Contact from '@/components/landing/Contact';
 import { Section } from '@/components/shared/Section';
 
@@ -27,7 +27,7 @@ export default function Home() {
           <Contact />
         </Section>
         <Section id="book" className="bg-muted/50">
-          <Booking />
+          <ContactForm />
         </Section>
       </main>
       <Footer />

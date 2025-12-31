@@ -77,7 +77,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-primary" />
-                <span className="text-sm text-muted-foreground">bookings@smilesstyles.co.za</span>
+                <span className="text-sm text-muted-foreground">adcrown1@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
                   <a href="https://wa.me/27765075573" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary">
@@ -97,9 +97,9 @@ export default function Footer() {
           <div>
             <h3 className="font-headline text-lg font-semibold">Hours</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>Mon - Fri: 9:00 AM - 6:00 PM</li>
+              <li>Mon - Fri: 8:30 AM - 8:00 PM</li>
               <li>Saturday: 9:00 AM - 5:00 PM</li>
-              <li>Sunday: Closed</li>
+              <li>Sunday: 10:00 AM - 8:00 PM</li>
             </ul>
           </div>
         </div>

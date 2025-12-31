@@ -35,9 +35,21 @@ import { useToast } from "@/hooks/use-toast"
 import { services } from "@/lib/data"
 
 const timeSlots = [
-  "08:30 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM",
-  "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM",
-  "06:00 PM", "07:00 PM", "08:00 PM"
+  "08:30 AM", "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM",
+  "12:30 PM", "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM", "03:00 PM", "03:30 PM", "04:00 PM", 
+  "04:30 PM", "05:00 PM", "05:30 PM", "06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM"
+];
+
+const weekendSaturdayTimeSlots = [
+  "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM",
+  "12:30 PM", "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM", "03:00 PM", "03:30 PM", "04:00 PM",
+  "04:30 PM"
+];
+
+const weekendSundayTimeSlots = [
+  "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "01:00 PM", "01:30 PM",
+  "02:00 PM", "02:30 PM", "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM", "05:00 PM", "05:30 PM",
+  "06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM"
 ];
 
 const formSchema = z.object({
@@ -57,6 +69,16 @@ export default function Booking() {
       phone: "",
     }
   })
+
+  const selectedDate = form.watch("date");
+
+  const getTimeSlotsForDate = (date: Date | undefined) => {
+    if (!date) return timeSlots;
+    const day = date.getDay();
+    if (day === 0) return weekendSundayTimeSlots; // Sunday
+    if (day === 6) return weekendSaturdayTimeSlots; // Saturday
+    return timeSlots; // Weekdays
+  }
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values)
@@ -158,7 +180,10 @@ export default function Booking() {
                         <Calendar
                           mode="single"
                           selected={field.value}
-                          onSelect={field.onChange}
+                          onSelect={(date) => {
+                            field.onChange(date);
+                            form.setValue("time", ""); // Reset time when date changes
+                          }}
                           disabled={(date) =>
                             date < new Date(new Date().setHours(0,0,0,0)) || date < new Date("1900-01-01")
                           }
@@ -176,15 +201,15 @@ export default function Booking() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Time</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select onValueChange={field.onChange} defaultValue={field.value} value={field.value}>
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger disabled={!selectedDate}>
                           <Clock className="mr-2 h-4 w-4 opacity-50" />
                           <SelectValue placeholder="Select a time slot" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        {timeSlots.map(time => (
+                        {getTimeSlotsForDate(selectedDate).map(time => (
                            <SelectItem key={time} value={time}>{time}</SelectItem>
                         ))}
                       </SelectContent>

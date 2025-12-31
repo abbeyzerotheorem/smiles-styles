@@ -5,6 +5,7 @@ import Services from '@/components/landing/Services';
 import Gallery from '@/components/landing/Gallery';
 import Testimonials from '@/components/landing/Testimonials';
 import Booking from '@/components/landing/Booking';
+import Contact from '@/components/landing/Contact';
 import { Section } from '@/components/shared/Section';
 
 export default function Home() {
@@ -22,7 +23,10 @@ export default function Home() {
         <Section id="testimonials" className="bg-muted/50">
           <Testimonials />
         </Section>
-        <Section id="book">
+        <Section id="contact">
+          <Contact />
+        </Section>
+        <Section id="book" className="bg-muted/50">
           <Booking />
         </Section>
       </main>

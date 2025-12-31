@@ -27,14 +27,14 @@ export const services: Service[] = [
     icon: 'Hand',
   },
   {
-    name: 'Special Pedicure',
-    description: 'Indulge in a rejuvenating pedicure with a luxurious foot scrub and massage.',
-    price: 'R350',
+    name: 'Special pedicure with hand',
+    description: 'Experience a soothing pedicure designed to refresh and pamper your feet, all with expert hand care.',
+    price: 'R450',
     icon: 'Footprints',
   },
   {
     name: 'Normal Eye Lashes',
-    description: 'Enhance your natural beauty with expertly applied classic eyelash extensions for a subtle, charming look.',
+    description: 'Enhance your natural beauty with expertly applied eyelash services designed to bring subtle definition and charm to your look.',
     price: 'R200',
     icon: 'Eye',
   }

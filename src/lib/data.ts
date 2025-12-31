@@ -33,6 +33,12 @@ export const services: Service[] = [
     icon: 'Footprints',
   },
   {
+    name: 'Foot Scrub',
+    description: 'Refresh tired feet with a gentle exfoliation that leaves your skin feeling soft and smooth.',
+    price: 'R350',
+    icon: 'Footprints',
+  },
+  {
     name: 'Normal Eye Lashes',
     description: 'Enhance your natural beauty with expertly applied eyelash services designed to bring subtle definition and charm to your look.',
     price: 'R200',

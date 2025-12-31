@@ -15,12 +15,6 @@ export const services: Service[] = [
     icon: 'Sparkles',
   },
   {
-    name: 'Classic Manicure',
-    description: 'Includes nail shaping, cuticle care, a relaxing hand massage, and polish.',
-    price: 'R250',
-    icon: 'Hand',
-  },
-  {
     name: 'Natural Nails',
     description: 'A classic treatment to keep your natural nails healthy and beautiful, including shaping, cuticle care, and a polish of your choice.',
     price: 'R250',

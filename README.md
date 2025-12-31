@@ -15,7 +15,6 @@ Welcome to the official repository for the Smiles & Styles website! This project
 
 *   **Framework:** [Next.js](https://nextjs.org/) (React)
 *   **Styling:** [Tailwind CSS](https://tailwindcss.com/) with [ShadCN UI](https://ui.shadcn.com/) components
-*   **AI/Backend:** [Genkit](https://firebase.google.com/docs/genkit)
 *   **Fonts:** Google Fonts (Belleza & Alegreya)
 *   **Icons:** [Lucide React](https://lucide.dev/)
 
@@ -49,4 +48,4 @@ Open [http://localhost:9002](http://localhost:9002) with your browser to see the
 
 ---
 
-This project was bootstrapped with Firebase Studio. Enjoy building! 🎨
+ Enjoy building! 🎨

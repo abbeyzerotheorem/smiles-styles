@@ -10,7 +10,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const navItems = [
   { name: "Services", href: "#services" },
   { name: "Gallery", href: "#gallery" },
-  { name: "AI Stylist", href: "#ai-stylist" },
   { name: "Testimonials", href: "#testimonials" },
 ];
 

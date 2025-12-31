@@ -9,16 +9,10 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    name: 'Ombre Nails',
-    description: 'A beautiful gradient of colors, blending from a lighter to a darker shade.',
-    price: 'R450',
+    name: 'Ombre / Stiletto',
+    description: 'Choose a beautiful color gradient (Ombre) or a bold, pointed shape (Stiletto).',
+    price: 'R300',
     icon: 'Sparkles',
-  },
-  {
-    name: 'Stiletto Nails',
-    description: 'Long, pointed nails that make a bold and dramatic statement.',
-    price: 'R500',
-    icon: 'Gem',
   },
   {
     name: 'Classic Manicure',

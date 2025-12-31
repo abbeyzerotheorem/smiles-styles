@@ -14,6 +14,39 @@ const navItems = [
   { name: "Contact", href: "#contact" },
 ];
 
+function MobileNav() {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger asChild>
+        <Button variant="ghost" size="icon" className="md:hidden">
+          <Menu className="h-6 w-6" />
+          <span className="sr-only">Open Menu</span>
+        </Button>
+      </SheetTrigger>
+      <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+        <nav className="flex h-full flex-col justify-between pt-8">
+          <div className="flex flex-col gap-6">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+          <Button asChild size="lg">
+            <Link href="#book" onClick={() => setOpen(false)}>Book an Appointment</Link>
+          </Button>
+        </nav>
+      </SheetContent>
+    </Sheet>
+  );
+}
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
 
@@ -35,7 +68,7 @@ export default function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <span className="font-headline text-2xl font-bold text-foreground">
-            Smiles & Styles
+            Salon Elegance
           </span>
         </Link>
 
@@ -54,32 +87,7 @@ export default function Header() {
           </Button>
         </nav>
 
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Open Menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <nav className="flex h-full flex-col justify-between pt-8">
-              <div className="flex flex-col gap-6">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="text-lg font-medium text-foreground transition-colors hover:text-primary"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-              <Button asChild size="lg">
-                <Link href="#book">Book an Appointment</Link>
-              </Button>
-            </nav>
-          </SheetContent>
-        </Sheet>
+        <MobileNav />
       </div>
     </header>
   );

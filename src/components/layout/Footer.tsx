@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <span className="font-headline text-xl font-bold text-foreground">
-                Smiles & Styles
+                Salon Elegance
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
@@ -106,7 +106,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-primary/10 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Smiles & Styles. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Salon Elegance. All Rights Reserved.
           </p>
         </div>
       </div>

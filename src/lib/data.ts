@@ -27,6 +27,12 @@ export const services: Service[] = [
     icon: 'Hand'
   },
   {
+    name: 'Buff and Shine',
+    description: 'A quick treatment to give your nails a healthy, natural shine.',
+    price: 'R150',
+    icon: 'Gem',
+  },
+  {
     name: 'Special pedicure with hand',
     description: 'Experience a soothing pedicure designed to refresh and pamper your feet, all with expert hand care.',
     price: 'R450',
